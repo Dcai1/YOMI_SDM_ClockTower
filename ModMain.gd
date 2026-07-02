@@ -21,7 +21,7 @@ func build_stage():
 	Builder = CustomStageBuilder.new() # For building the stage metadata
 	Loader = get_tree().get_root().get_node("CSL"); # For loading the stage itself
 
-	Builder.data.stage_name = "Scarlet Devil Mansion - Clock Tower (Day)";
+	Builder.data.stage_name = "Temple Thing";
 	Builder.data.stage_icon = "res://SDM_ClockTower/icon.png"; 
 
 	# Ground
@@ -52,12 +52,60 @@ func build_stage():
 	Builder.make_layer("CloudsLayer", Builder.get_material_id("SkyBackground"), {
 	});
 
-	Builder.make_element("Clouds", Builder.get_material_id("CloudsLayer"), {
+	# Clouds layer 1
+	Builder.make_element("Clouds1", Builder.get_material_id("CloudsLayer"), {
 		"active": true,
 		"ticks_per_frame": 30,
 		"frames": Builder.make_spriteframes_animation("res://SDM_ClockTower/layers/sky/"),
 		"position": Vector2(0, -25),
 		"h_tile": true,
 	});
+
+	# Clouds layer 2
+	Builder.make_element("Clouds2", Builder.get_material_id("CloudsLayer"), {
+		"active": true,
+		"ticks_per_frame": 40,
+		"frames": Builder.make_spriteframes_animation("res://SDM_ClockTower/layers/sky/"),
+		"position": Vector2(0, -270),
+		"h_tile": true,
+	});
+
+	# Clouds layer 3
+	Builder.make_element("Clouds2", Builder.get_material_id("CloudsLayer"), {
+		"active": true,
+		"ticks_per_frame": 50,
+		"frames": Builder.make_spriteframes_animation("res://SDM_ClockTower/layers/sky/"),
+		"position": Vector2(0, -520),
+		"h_tile": true,
+	});
+
+	# Clouds layer 2
+	Builder.make_element("Clouds2", Builder.get_material_id("CloudsLayer"), {
+		"active": true,
+		"ticks_per_frame": 40,
+		"frames": Builder.make_spriteframes_animation("res://SDM_ClockTower/layers/sky/"),
+		"position": Vector2(0, -270),
+		"h_tile": true,
+	});
+
+	# Clouds layer 4
+	Builder.make_element("Clouds2", Builder.get_material_id("CloudsLayer"), {
+		"active": true,
+		"ticks_per_frame": 50,
+		"frames": Builder.make_spriteframes_animation("res://SDM_ClockTower/layers/sky/"),
+		"position": Vector2(0, -770),
+		"h_tile": true,
+	});
+
+	# Clouds layer 5
+	Builder.make_element("Clouds2", Builder.get_material_id("CloudsLayer"), {
+		"active": true,
+		"ticks_per_frame": 60,
+		"frames": Builder.make_spriteframes_animation("res://SDM_ClockTower/layers/sky/"),
+		"position": Vector2(0, -1020),
+		"h_tile": true,
+	});
+
+	
 
 	Loader.add_stage(Builder.data);

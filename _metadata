@@ -2,10 +2,10 @@
   "author": "monz",
   "client_side": true,
   "description": "placeholder",
-  "friendly_name": "Scarlet Devil Mansion - Clock Tower (Day)",
+  "friendly_name": "Temple Thing",
   "id": "68574",
   "link": "",
-  "name": "clockTowerDay",
+  "name": "simpleTemple",
   "overwrites": false,
   "priority": 1,
   "requires": [
