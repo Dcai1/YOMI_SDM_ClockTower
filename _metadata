@@ -1,0 +1,15 @@
+{
+  "author": "monz",
+  "client_side": true,
+  "description": "placeholder",
+  "friendly_name": "Scarlet Devil Mansion - Clock Tower (Day)",
+  "id": "68574",
+  "link": "",
+  "name": "clockTowerDay",
+  "overwrites": false,
+  "priority": 1,
+  "requires": [
+    ""
+  ],
+  "version": "1.0"
+}
