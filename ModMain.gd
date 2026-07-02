@@ -22,7 +22,7 @@ func build_stage():
 	Loader = get_tree().get_root().get_node("CSL"); # For loading the stage itself
 
 	Builder.data.stage_name = "Temple Thing";
-	Builder.data.stage_icon = "res://SDM_ClockTower/icon.png"; 
+	Builder.data.stage_icon = "res://Temple_Map/icon.png"; 
 
 	# Ground
 	Builder.make_background("GroundBackground", { # Creating a background to hold our ground layers
@@ -32,12 +32,12 @@ func build_stage():
 	Builder.make_layer("GroundLayer", Builder.get_material_id("GroundBackground")); 
 
 	Builder.make_element("Ground", Builder.get_material_id("GroundLayer"), { 
-		"frames": Builder.make_spriteframes_image("res://SDM_ClockTower/layers/assets/ground.png"),
+		"frames": Builder.make_spriteframes_image("res://Temple_Map/layers/assets/ground.png"),
 		"position": Vector2(0, 75),
 		"h_tile": true,
 	});
 
-	# Clocktower
+	# Clocktower - no longer used
 	#Builder.make_element("Clocktower", Builder.get_material_id("GroundLayer"), { 
 		#"frames": Builder.make_spriteframes_image("res://SDM_ClockTower/layers/assets/clocktower.png"),
 		#"position": Vector2(0, -460),
@@ -55,8 +55,8 @@ func build_stage():
 	# Clouds layer 1
 	Builder.make_element("Clouds1", Builder.get_material_id("CloudsLayer"), {
 		"active": true,
-		"ticks_per_frame": 30,
-		"frames": Builder.make_spriteframes_animation("res://SDM_ClockTower/layers/sky/"),
+		"ticks_per_frame": 120,
+		"frames": Builder.make_spriteframes_animation("res://Temple_Map/layers/sky/"),
 		"position": Vector2(0, -25),
 		"h_tile": true,
 	});
@@ -64,44 +64,44 @@ func build_stage():
 	# Clouds layer 2
 	Builder.make_element("Clouds2", Builder.get_material_id("CloudsLayer"), {
 		"active": true,
-		"ticks_per_frame": 40,
-		"frames": Builder.make_spriteframes_animation("res://SDM_ClockTower/layers/sky/"),
+		"ticks_per_frame": 60,
+		"frames": Builder.make_spriteframes_animation("res://Temple_Map/layers/sky/"),
 		"position": Vector2(0, -270),
 		"h_tile": true,
 	});
 
 	# Clouds layer 3
-	Builder.make_element("Clouds2", Builder.get_material_id("CloudsLayer"), {
+	Builder.make_element("Clouds3", Builder.get_material_id("CloudsLayer"), {
 		"active": true,
-		"ticks_per_frame": 50,
-		"frames": Builder.make_spriteframes_animation("res://SDM_ClockTower/layers/sky/"),
+		"ticks_per_frame": 120,
+		"frames": Builder.make_spriteframes_animation("res://Temple_Map/layers/sky/"),
 		"position": Vector2(0, -520),
 		"h_tile": true,
 	});
 
-	# Clouds layer 2
-	Builder.make_element("Clouds2", Builder.get_material_id("CloudsLayer"), {
+	# Clouds layer 4
+	Builder.make_element("Clouds4", Builder.get_material_id("CloudsLayer"), {
 		"active": true,
-		"ticks_per_frame": 40,
-		"frames": Builder.make_spriteframes_animation("res://SDM_ClockTower/layers/sky/"),
+		"ticks_per_frame": 60,
+		"frames": Builder.make_spriteframes_animation("res://Temple_Map/layers/sky/"),
 		"position": Vector2(0, -270),
 		"h_tile": true,
 	});
 
-	# Clouds layer 4
-	Builder.make_element("Clouds2", Builder.get_material_id("CloudsLayer"), {
+	# Clouds layer 5
+	Builder.make_element("Clouds5", Builder.get_material_id("CloudsLayer"), {
 		"active": true,
-		"ticks_per_frame": 50,
-		"frames": Builder.make_spriteframes_animation("res://SDM_ClockTower/layers/sky/"),
+		"ticks_per_frame": 120,
+		"frames": Builder.make_spriteframes_animation("res://Temple_Map/layers/sky/"),
 		"position": Vector2(0, -770),
 		"h_tile": true,
 	});
 
-	# Clouds layer 5
-	Builder.make_element("Clouds2", Builder.get_material_id("CloudsLayer"), {
+	# Clouds layer 6
+	Builder.make_element("Clouds6", Builder.get_material_id("CloudsLayer"), {
 		"active": true,
 		"ticks_per_frame": 60,
-		"frames": Builder.make_spriteframes_animation("res://SDM_ClockTower/layers/sky/"),
+		"frames": Builder.make_spriteframes_animation("res://Temple_Map/layers/sky/"),
 		"position": Vector2(0, -1020),
 		"h_tile": true,
 	});
