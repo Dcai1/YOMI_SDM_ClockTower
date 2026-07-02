@@ -32,26 +32,31 @@ func build_stage():
 	Builder.make_layer("GroundLayer", Builder.get_material_id("GroundBackground")); 
 
 	Builder.make_element("Ground", Builder.get_material_id("GroundLayer"), { 
-		"frames": Builder.make_spriteframes_image("res://SDM_ClockTower/layers/ground.png"),
+		"frames": Builder.make_spriteframes_image("res://SDM_ClockTower/layers/assets/ground.png"),
 		"position": Vector2(0, 75),
 		"h_tile": true,
+	});
+
+	# Clocktower
+	Builder.make_element("Clocktower", Builder.get_material_id("GroundLayer"), { 
+		"frames": Builder.make_spriteframes_image("res://SDM_ClockTower/layers/assets/clocktower.png"),
+		"position": Vector2(0, -460),
 	});
 
 	# Clouds
 	Builder.make_background("SkyBackground", { # Creating a background to hold our ground layers, 
 		"layer": 0, # index
-		# "bg_color": Color("#B0CBFF")
+		"bg_color": Color("#68a5e3")
 	});
 
 	Builder.make_layer("CloudsLayer", Builder.get_material_id("SkyBackground"), {
 	});
 
-	Builder.make_element("Clouds", Builder.get_material_id("CloudsLayer"), {
-		"active": true,
-		"ticks_per_frame": 10,
-		"frames": Builder.make_spriteframes_image("res://SDM_ClockTower/layers/sky/sky.png"),
-		"position": Vector2(0, -150),
-		"h_tile": true,
-	});
+	#Builder.make_element("Clouds", Builder.get_material_id("CloudsLayer"), {
+		#"active": true,
+		#"frames": Builder.make_spriteframes_image("res://SDM_ClockTower/layers/sky/sky.png"),
+		#"position": Vector2(0, 0),
+		#"h_tile": true,
+	#});
 
 	Loader.add_stage(Builder.data);
